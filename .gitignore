@@ -32,3 +32,6 @@ htmlcov/*
 
 # local mlflow files
 mlruns/
+.env
+*.env
+.env.*
