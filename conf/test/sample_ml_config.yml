@@ -1,4 +1,0 @@
-input:
-  database: "default"
-  table: "sklearn_housing"
-experiment: "/Shared/pyspark-logging-examples/sample_experiment"

@@ -1,7 +1,7 @@
 {
     "environments": {
         "default": {
-            "profile": "e2-demo-field-eng",
+            "profile": "DEFAULT",
             "workspace_dir": "/Shared/dbx/pyspark_logging_examples",
             "artifact_location": "dbfs:/Shared/dbx/projects/pyspark_logging_examples"
         }
