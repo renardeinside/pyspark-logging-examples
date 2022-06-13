@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from argparse import ArgumentParser
 from logging import Logger
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 import yaml
 import pathlib
 from pyspark.sql import SparkSession
@@ -24,9 +24,9 @@ def get_dbutils(
 
 
 class LoggerProvider:
-    def get_logger(self, spark: SparkSession):
+    def get_logger(self, spark: SparkSession, custom_prefix: Optional[str] = ""):
         log4j_logger = spark._jvm.org.apache.log4j  # noqa
-        return log4j_logger.LogManager.getLogger(self.__full_name__())
+        return log4j_logger.LogManager.getLogger(custom_prefix + self.__full_name__())
 
     def __full_name__(self):
         klass = self.__class__

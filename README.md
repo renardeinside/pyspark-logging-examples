@@ -8,4 +8,7 @@ Provide your logging configurations in `conf/local/log4j.properties` and pass th
 
 ## Databricks setup
 
-TBD.
+* Describe your logging configurations in `conf/databricks/driver-log4j.properties`. 
+* Provide your `DATABRICKS_CLI_PROFILE` environment variable in the `.env` file
+* Upload the configurations to DBFS via `make upload-log-configuration`
+* Add the init script in the cluster properties
